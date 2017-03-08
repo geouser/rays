@@ -16,6 +16,23 @@
 
     &-list {
         margin-top: 150px;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 900px;
+            height: 40px;
+            position: absolute;
+            left: 50%;
+            top: -70px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-image: url(../images/services-scheme.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
     }
 }
 
