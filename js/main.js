@@ -108,6 +108,11 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.offer--slider').slick({
+        fade: true,
+        arrows: true,
+        dots: false
+    });
 
     /*----------------------------
                               SEND FORM

@@ -1,26 +1,132 @@
          
 .mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
+    @include position(absolute, 0, 0, auto, 0);
     @include transition(all, .4s);
-    
-        /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
+    height: 110px;
+    @include flex($wrap:no-wrap);
+    background-color: #00616B;
+    &__left,
+    &__right {
+        height: 100%;        
+        min-width: 370px;
+        @media (max-width: 1700px) {
+            width: 340px;
+            min-width: 0;
         }
-        /*.............end media..............*/
+        @media (max-width: 1500px) {
+            width: 290px;
+        }
+    }
+
+    &__info {
+        background-color: #0b3034;
+        height: 100%;
+        color: #FFF;
+        padding: 0 10px;
+         @include flex($justify:center, $alignI:center);
+         @media (max-width: 1700px) {
+            font-size: 14px;
+        }
+        .tel {
+            color: #FFF;
+            display: inline-block;
+            vertical-align: middle;
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 23px;
+                height: 23px;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        i {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 30px;
+            width: 1px;
+            background-color: rgba(255,255,255,.1);
+            margin: 0 30px;
+            @media (max-width: 1700px) {
+                margin: 0 20px;
+            }
+            @media (max-width: 1500px) {
+                margin: 0 10px;
+                height: 20px;
+            }
+        }
+        .languages {
+            display: inline-block;
+            vertical-align: middle;
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                color: #FFF;
+                margin: 0 4px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
-            /*.................media.............*/
-            @include m800 { 
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 0 20px;
+            @media (max-width: 1700px) {
+                margin-left: 15px;
             }
-            /*.............end media.............*/
+            &:after {
+                margin-left: 20px;
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 4px;
+                height: 4px;
+                background: #FFF;
+                -webkit-border-radius: 50%;
+                        border-radius: 50%;
+                @media (max-width: 1700px) {
+                    margin-left: 15px;
+                }
+            }
+            &:last-of-type {
+                &:after {
+                    display: none;
+                }
+            }
+            a {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 500;
+                @media (max-width: 1700px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }
 
 
+.logo {
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
 
 
 /* ------------------------------------ */
