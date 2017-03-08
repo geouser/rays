@@ -142,6 +142,25 @@ jQuery(document).ready(function($) {
     })
 
 
+
+
+    $('.cargo-slider').slick({
+        arrows: false,
+        dots: false,
+        fade: true,
+        asNavFor: '.cargo-slider-thumbnails'
+    })
+
+    $('.cargo-slider-thumbnails').slick({
+        arrows: false,
+        dots: false,
+        focusOnSelect: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.cargo-slider'
+    })
+
+
     /*----------------------------
                               SEND FORM
     -------------------------*/
