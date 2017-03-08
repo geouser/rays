@@ -70,6 +70,13 @@
         top: 100%;
         left: 0;
         right: 0;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    &:hover:after {
+        height: 12px;
     }
 
     &.blue:after {
