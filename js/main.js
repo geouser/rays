@@ -60,15 +60,19 @@ jQuery(document).ready(function($) {
         var windowHalf = $(window).height() / 2;
         
         $sections.each(function(){
-          var divPosition = $(this).offset().top - windowHalf;
+            var divPosition = $(this).offset().top - windowHalf;
           
-          if( divPosition - 1 < currentScroll ){
-            $currentSection = $(this);
-          }
-        var id = $currentSection.attr('id');
-          $('a').removeClass('active');
-          $("[href=#"+id+"]").addClass('active');
-        })
+            if( divPosition - 1 < currentScroll ){
+                $currentSection = $(this);
+            }
+
+            var id = $currentSection.attr('id');
+            if ( exist(id) ) {
+                $('a').removeClass('active');
+                $("[href=#"+id+"]").addClass('active');
+            }
+        });
+
     });
 
     /*---------------------------
@@ -107,6 +111,29 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
+
+
+    /*---------------------------
+                                  Sliders
+    ---------------------------*/
+    $('.partners-slider').on('init', function(event, slick){
+        $(this).css({
+            opacity: 1,
+            visibility: 'visible'
+        })
+    });
+    $('.partners-slider').slick({
+        arrows: false,
+        dots: false,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 5000,
+        autoplaySpeed: 0,
+        easing: 'linear',
+        pauseOnHover: false,
+        pauseOnFocus: false
+    })
 
 
     /*----------------------------
