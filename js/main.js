@@ -137,7 +137,8 @@ jQuery(document).ready(function($) {
         autoplaySpeed: 0,
         easing: 'linear',
         pauseOnHover: false,
-        pauseOnFocus: false
+        pauseOnFocus: false,
+        draggable: false
     })
 
 
