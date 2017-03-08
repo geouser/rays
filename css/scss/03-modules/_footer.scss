@@ -1,0 +1,150 @@
+.footer {
+    background-color: $dark-blue;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 100px;
+
+    @media (max-width: 1600px) {
+        padding:  0 50px;
+    }
+
+    &-top {
+        padding: 70px 0;
+        border-bottom: 1px solid #454545;
+        line-height: 24px;
+
+        [class*='col-'] {
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+
+
+        .location {
+            @include flex($alignI: flex-start);
+
+            .footer-location {
+                width: 88px;
+                display: block;
+                margin-right: 30px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .footer-address {
+                width: -webkit-calc(100% - 118px);
+                width: calc(100% - 118px);
+            }
+        }
+
+        .contacts {
+            a[href^=mailto] {
+                color: $blue;
+            }
+        }
+
+        .services-menu {
+            @include flex($alignI: flex-start);
+
+            .menu-item {
+                width: 50%;
+                list-style: none;
+
+                a {
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .social {
+            text-align: right;
+            width: 120px;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            
+            .socials {
+                margin: 0 -2px;
+                padding-top: 10px;
+            }
+
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 2px;
+            }
+        }
+    }
+
+
+    &-bottom {
+        @include flex($alignI: center);
+        position: relative;
+        padding: 50px 0 70px;
+        color: #797979;
+
+        p {
+            width: 50%;
+        }
+
+        .scroll-top {
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                width: 14px;
+                height: 14px;
+                border-top: 1px solid #fff;
+                border-right: 1px solid #fff;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                display: block;
+                -webkit-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+
+            &:hover:after {
+                border-color: $blue;
+            }
+        }
+
+        .studio {
+            text-align: right;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 30px;
+
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+}
