@@ -10,13 +10,18 @@ body {
   font-family: 'Stem';
   padding-top: 110px;
   font-size: 15px;
+  color: #2d2d2d;
 }
 
+b,
+strong {
+  font-weight: bold;
+}
 
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 1200px;
+	width: 1180px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -24,7 +29,7 @@ body {
 
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);
-    margin: 0 -15px;
+    margin: 0 -10px;
 
     &.flex-row-middle {
         -webkit-align-items: center;
@@ -33,7 +38,7 @@ body {
     }
 }
 [class*='col-'] {
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .col-1  { width: 8.33%; }
