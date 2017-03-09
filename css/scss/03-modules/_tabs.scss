@@ -1,0 +1,44 @@
+.tabs {
+    padding: 80px 0;
+    border-bottom: 1px dashed #CCCCCC;
+
+    &-controls {
+        padding-bottom: 60px;
+        border-bottom: 1px dashed #CCCCCC;
+
+        &-item {
+            display: inline-block;
+            vertical-align: middle;
+            list-style: none;
+            color: #b8b8b8;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px dashed #ccc;
+            margin: 0 8px;
+            
+            font-size: 25px;
+            font-weight: 300;
+
+            a {
+                color: inherit;
+                display: block;
+                padding: 15px 60px;
+            }
+        }
+
+        &.yellow &-item.ui-state-active {
+            color: $yellow;
+            border-color: $yellow;
+        }
+
+        &.blue &-item.ui-state-active {
+            color: $blue;
+            border-color: $blue;
+        }
+    }
+
+    &-tab {
+        padding-top: 60px;
+    }
+}
