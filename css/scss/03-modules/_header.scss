@@ -7,7 +7,30 @@
     background-color: #00616B;
     -webkit-box-shadow: 0 0 4px rgba(0,0,0,.4);
             box-shadow: 0 0 4px rgba(0,0,0,.4);
-
+    @media (max-width: 1200px) {
+        width: 260px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        bottom: 0;
+        display: block;
+        left: auto;
+        z-index: 100;
+        padding: 40px 0;
+            -webkit-transform: translateX(260px);
+       -moz-transform: translateX(260px);
+        -ms-transform: translateX(260px);
+         -o-transform: translateX(260px);
+            transform: translateX(260px);
+    }
+    &.active               {
+        -webkit-transform: translateX(0px);
+           -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+             -o-transform: translateX(0px);
+                transform: translateX(0px);
+    }
     &__left,
     &__right {
         height: 100%;        
@@ -18,6 +41,10 @@
         }
         @media (max-width: 1500px) {
             width: 290px;
+        }
+        @media (max-width: 1200px) {
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -30,10 +57,23 @@
          @media (max-width: 1700px) {
             font-size: 14px;
         }
+        @media (max-width: 1300px) {
+            font-size: 12px;
+        }
+        @media (max-width: 1200px) {
+            display: block;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
         .tel {
             color: #FFF;
             display: inline-block;
             vertical-align: middle;
+            @media (max-width: 1200px) {
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+            }
             &:before {
                 content: "";
                 display: inline-block;
@@ -45,6 +85,11 @@
                 -webkit-background-size: 100% 100%;
                      -o-background-size: 100% 100%;
                         background-size: 100% 100%;
+                @media (max-width: 1300px) {
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 4px;
+                }
             }
             &:hover:before {
                 background-image: url("../images/phone-call-hover.svg");
@@ -70,6 +115,9 @@
                 margin: 0 10px;
                 height: 20px;
             }
+            @media (max-width: 1200px) {
+                display: none;
+            }
         }
         .languages {
             display: inline-block;
@@ -86,6 +134,11 @@
                 &:hover {
                     color: #FE4E2D;
                 }
+            }
+            @media (max-width: 1200px) {
+                display: block;
+                margin: 10px auto;
+                text-align: center;
             }
         }
     }
@@ -118,6 +171,14 @@
             @media (max-width: 1700px) {
                 margin-left: 15px;
             }
+            @media (max-width: 1300px) {
+                margin-left: 10px;
+            }
+            @media (max-width: 1200px) {
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+            }
             &:after {
                 margin-left: 20px;
                 content: "";
@@ -130,6 +191,12 @@
                         border-radius: 50%;
                 @media (max-width: 1700px) {
                     margin-left: 15px;
+                }
+                @media (max-width: 1300px) {
+                    margin-left: 10px;
+                }
+                @media (max-width: 1200px) {
+                    display: none;
                 }
             }
             &:last-of-type {
@@ -145,6 +212,9 @@
                 @media (max-width: 1700px) {
                     font-size: 14px;
                 }
+                @media (max-width: 1300px) {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -156,6 +226,28 @@
         display: block;
         max-width: 100%;
     }
+    &--mobile {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        width: 140px;
+        margin: auto;
+        z-index: 10;
+    }
+    @media (max-width: 1200px) {
+        margin: 0 auto 40px;
+        display: block;
+        text-align: center;
+        img {
+            margin: 0 auto;
+        }
+        &--mobile {
+            display: block;
+            width: 140px;
+        }
+    }
 }
 
 
@@ -164,38 +256,47 @@
 
 .menu-button     {    
     display: none;
-    width: 50px;
-    height: 50px;
-    @include position(fixed, 15px, 15px, auto, auto);
+    width: 40px;
+    height: 39px;
+    @include position(fixed, 15px, 10px, auto, auto);
     margin: auto; 
     cursor: pointer;
-    z-index: 100;
-    background-color: salmon;
+    z-index: 101;
+    background-color: #00616B;
     border: none;
     -webkit-border-radius: 4px;
             border-radius: 4px;
+    @include transition(all, .4s);
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.4);
+            box-shadow: 0 0 4px rgba(0,0,0,.4);
     .menu-line {
         display: block;
         @include position(absolute, auto, 0, auto, 0);
         width: 60%;
-        height: 5px;
+        height: 3px;
         background-color: #fff;
         -webkit-border-radius: 1px;
         border-radius: 1px;
         @include transition(all, .4s);
     }
 
-    .top_line              {   top: 12px;  margin: auto;}
-    .middle_line           {   top: 22px;  margin: auto;}
-    .bottom_line           {   bottom: 12px; margin: auto;}
+    .top_line              {   top: 10px;  margin: auto;}
+    .middle_line           {   top: 18px;  margin: auto;}
+    .bottom_line           {   bottom: 10px; margin: auto;}
 
-    &.active               {   -webkit-border-radius: 6px; border-radius: 6px;}
+    &.active               {
+        -webkit-transform: translateX(-260px);
+           -moz-transform: translateX(-260px);
+            -ms-transform: translateX(-260px);
+             -o-transform: translateX(-260px);
+                transform: translateX(-260px);
+    }
     &.active .top_line     {   @include transform(rotate(45deg)); top: 45%;}
     &.active .bottom_line  {   @include transform(rotate(-45deg)); bottom: 45%;}
     &.active .middle_line  {   width: 0; left: 50%;}
 
         /*.................media.............*/
-        @include m800 {
+        @media (max-width: 1200px) {
             display: block;
         }
         /*..............end media.............*/

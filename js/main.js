@@ -61,8 +61,13 @@ jQuery(document).ready(function($) {
     var lastPosition = '';
     var lastPositionGap = '';
     var goTop = function(el){
-        var topOfBlock = $('.tabs-controls').offset().top,
-            scrolled = $(window).scrollTop();
+        if ($(window).width() < 1200) {
+           var topOfBlock = $('.illustrated-title').offset().top;
+        }
+        else {
+           var topOfBlock = $('.tabs-controls').offset().top;
+        }
+        var scrolled = $(window).scrollTop();
 
         lastPositionGap = $(el).offset().top - scrolled;
         lastPosition = $(el).offset().top;
