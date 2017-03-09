@@ -220,6 +220,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         $('.gallery-slider').slick('slickGoTo', $(this).attr('data-slide-index') );
         $('.gallery-slider').slick('setPosition');
+        $('.gallery-slider-thumbnails').slick('setPosition');
         $('.lightbox-slider').addClass('active');
     });
 
