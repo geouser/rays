@@ -8,6 +8,10 @@
         -webkit-flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
+
+        .col-6:first-child {
+            text-align: right;
+        }
     }
 
     h2 {
@@ -42,6 +46,10 @@
             margin-right: 8px;
         }
 
+    }
+
+    img {
+        max-width: 100%;
     }
 
     &.grey {

@@ -171,9 +171,12 @@ jQuery(document).ready(function($) {
 
 
 
-    $('.gallery-item').each(function(index, el) {
-        $(this).attr('data-slide-index', index);
-    });
+    if ( exist('.gallery-item') ) {
+        $('.gallery-item').each(function(index, el) {
+            $(this).attr('data-slide-index', index);
+        });    
+    }
+    
     $('.gallery-item').on('click', function(event) {
         event.preventDefault();
         $('.gallery-slider').slick('slickGoTo', $(this).attr('data-slide-index') );
