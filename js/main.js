@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
             num = 1;
 
             if(!move) { 
-                for ( i = el-6; i < el; i++ ) {
+                for ( i = el-5; i <= el; i++ ) {
                     var color = '';
                     function setSiblings(){
                         color = parent.children().eq(i).css('background-color');
