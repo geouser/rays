@@ -77,6 +77,10 @@
             width: 580px;
             max-width: 100%;
         }
+
+        @media (max-width: 767px) {
+            padding: 40px 0;
+        }
     } 
 
     &-item {
