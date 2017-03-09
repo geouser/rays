@@ -92,6 +92,14 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  Tabs
+    ---------------------------*/
+    if ( exist('.tabs') ) {
+        $('.tabs').tabs();
+    }
+
+
+    /*---------------------------
                                   Magnific popup
     ---------------------------*/
     $('.magnific').magnificPopup({
