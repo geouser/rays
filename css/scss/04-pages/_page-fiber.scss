@@ -102,9 +102,9 @@
     opacity: 0;
     visibility: hidden;
     z-index: 5;
-    -webkit-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
     &.active {
         visibility: visible;

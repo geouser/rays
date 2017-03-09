@@ -177,6 +177,7 @@ jQuery(document).ready(function($) {
     $('.gallery-item').on('click', function(event) {
         event.preventDefault();
         $('.gallery-slider').slick('slickGoTo', $(this).attr('data-slide-index') );
+        $('.gallery-slider').slick('setPosition');
         $('.lightbox-slider').addClass('active');
     });
 
