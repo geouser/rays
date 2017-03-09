@@ -7,11 +7,21 @@
     padding: 70px 0;
     border-bottom: 1px dashed #CCCCCC;
 
+    @media (max-width: 767px) {
+        padding: 40px 0;
+    }
+
     .flex-row {
         margin: 0 -5px;
 
         [class*="col-"] {
             padding: 0 5px;
+        }
+
+        @media (max-width: 450px) {
+            .col-4 {
+                width: 100%;
+            }
         }
     }
 
@@ -23,8 +33,32 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
 
+        @media (max-width: 991px) and (min-width: 768px) {
+            height: 250px;
+        }
+
+        @media (max-width: 767px) and (min-width: 551px) {
+            height: 200px;
+        }
+
+        @media (max-width: 550px) and (min-width: 451px) {
+                height: 160px;
+            }
+
         &.small {
             height: 145px;
+
+            @media (max-width: 991px) and (min-width: 768px) {
+                height: 120px;
+            }
+
+            @media (max-width: 767px) and (min-width: 551px) {
+                height: 95px;
+            }
+
+            @media (max-width: 550px) and (min-width: 451px) {
+                height: 75px;
+            }
         }
     }
 }
@@ -39,6 +73,11 @@
         width: 60%;
         margin: 0 auto;
         padding: 60px 0 75px;
+
+        @media (max-width: 991px) {
+            width: 580px;
+            max-width: 100%;
+        }
     } 
 
     &-item {
@@ -54,17 +93,36 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
+
+            @media (max-width: 550px) {
+                width: 110px;
+            }
         }
 
         .text {
             width: -webkit-calc(100% - 140px);
             width: calc(100% - 140px);
             padding: 15px 30px;
+
+            @media (max-width: 991px) {
+                padding: 15px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 12px;
+                padding: 10px;
+                width: -webkit-calc(100% - 110px);
+                width: calc(100% - 110px);
+            }
         }
     }
 
     .col-6 {
         margin-bottom: 20px;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
     }
 
     .flex-row {
@@ -78,6 +136,18 @@
 
 .grid-gallery {
     margin-bottom: -20px;
+
+    @media (max-width: 767px) {
+        .col-3 {
+            width: 33.33%;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .col-3 {
+            width: 50%;
+        }
+    }
 
     .gallery-item {
         display: block;
@@ -101,10 +171,10 @@
     bottom: 0;
     opacity: 0;
     visibility: hidden;
-    z-index: 5;
-    -webkit-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
+    z-index: 101;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
     &.active {
         visibility: visible;
@@ -125,6 +195,10 @@
         transform: translateX(-50%);
         cursor: pointer;
         z-index: 3;
+
+        @media (max-width: 767px) {
+            top: 25px;
+        }
 
         img {
             display: block;
@@ -172,40 +246,19 @@
             background-color: rgba(255, 255, 255, .6);
             z-index: 3;
 
-            &:before {
-                content: '';
-                width: 14px;
-                height: 14px;
-                border-top: 2px solid #fff;
-                border-right: 2px solid #fff;
-                position: absolute;
-                top: 50%;
-                margin-top: -7px;
+            @media (max-width: 767px) {
+                width: 35px;
+                height: 45px;
             }
 
             &.slick-prev {
                 left: 0;
-
-                &:before {
-                    -webkit-transform: rotate(-135deg);
-                    -ms-transform: rotate(-135deg);
-                    -o-transform: rotate(-135deg);
-                    transform: rotate(-135deg);
-                    margin-left: -3.5px;
-                }
             }
 
             &.slick-next {
                 right: 0;
-
-                &:before {
-                    -webkit-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    -o-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                    margin-left: -10.5px;
-                }
             }
+
         }
     }
 
@@ -227,6 +280,7 @@
             display: block;
             width: 670px;
             margin: 0 auto;
+            max-width: 100%;
         }
     }
 }

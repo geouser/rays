@@ -222,7 +222,37 @@ jQuery(document).ready(function($) {
         easing: 'linear',
         pauseOnHover: false,
         pauseOnFocus: false,
-        draggable: false
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     })
 
 
@@ -241,18 +271,32 @@ jQuery(document).ready(function($) {
         focusOnSelect: true,
         slidesToShow: 5,
         slidesToScroll: 1,
-        asNavFor: '.cargo-slider'
+        asNavFor: '.cargo-slider',
+        responsive: [
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     })
 
 
 
 
-    $('.gallery-item').each(function(index, el) {
-        $(this).attr('data-slide-index', index);
-    });
+    if ( exist('.gallery-item') ) {
+        $('.gallery-item').each(function(index, el) {
+            $(this).attr('data-slide-index', index);
+        });    
+    }
+    
     $('.gallery-item').on('click', function(event) {
         event.preventDefault();
         $('.gallery-slider').slick('slickGoTo', $(this).attr('data-slide-index') );
+        $('.gallery-slider').slick('setPosition');
+        $('.gallery-slider-thumbnails').slick('setPosition');
         $('.lightbox-slider').addClass('active');
     });
 

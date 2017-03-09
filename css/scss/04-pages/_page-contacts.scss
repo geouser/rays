@@ -1,6 +1,10 @@
 .section-contacts {
     padding: 80px 0 90px;
 
+    @media (max-width: 767px) {
+        padding: 40px 0;
+    }
+
     &-top {
         color: #565656;
 
@@ -17,12 +21,23 @@
             -webkit-justify-content: center;
             -ms-flex-pack: center;
             justify-content: center;
+
+            @media (max-width: 450px) {
+                display: block;
+            }
         }
 
         .cargo-button {
             height: 80px;
             width: 170px;
             padding: 0 20px;
+
+            @media (max-width: 450px) {
+                display: block;
+                margin-top: 25px;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
             img {
                 width: 40px;
@@ -48,9 +63,35 @@
         border-top: 1px dashed #CCCCCC;
         padding-top: 80px;
 
+        @media (max-width: 767px) {
+            padding-top: 40px;
+            margin-top: 40px;
+        }
+
         form {
             width: 100%;
+
+            @media (max-width: 767px) {
+                width: 600px;
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+
+                .col-6 {
+                    width: 100%;
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .button {
+                    margin-top: 25px;
+                }
+            }
         }
+
+
     }
 }
 
@@ -60,6 +101,14 @@
 
 .map {
     height: 600px;
+
+    @media (max-width: 1200px) {
+        height: 400px;
+    }
+
+    @media (max-width: 767px) {
+        height: 300px;
+    }
 
     .map-canvas {
         height: 100%;
