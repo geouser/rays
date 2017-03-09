@@ -1,44 +1,75 @@
-.tabs {
-    padding: 80px 0;
+.fiber-section {
+    font-size: 16px;
+    color: #565656;
+}
+
+.fiberglass-gallery {
+    padding: 70px 0;
     border-bottom: 1px dashed #CCCCCC;
 
-    &-controls {
-        padding-bottom: 60px;
-        border-bottom: 1px dashed #CCCCCC;
+    .flex-row {
+        margin: 0 -5px;
 
-        &-item {
-            display: inline-block;
-            vertical-align: middle;
-            list-style: none;
-            color: #b8b8b8;
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-            border: 1px dashed #ccc;
-            margin: 0 8px;
-            
-            font-size: 25px;
-            font-weight: 300;
-
-            a {
-                color: inherit;
-                display: block;
-                padding: 15px 60px;
-            }
-        }
-
-        &.yellow &-item.ui-state-active {
-            color: $yellow;
-            border-color: $yellow;
-        }
-
-        &.blue &-item.ui-state-active {
-            color: $blue;
-            border-color: $blue;
+        [class*="col-"] {
+            padding: 0 5px;
         }
     }
 
-    &-tab {
-        padding-top: 60px;
+    .image {
+        height: 300px;
+        margin-bottom: 10px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        &.small {
+            height: 145px;
+        }
+    }
+}
+
+.fiber-features {
+    margin-bottom: -20px;
+    
+    &-title {
+        color: $yellow;
+        font-size: 25px;
+        font-weight: 300;
+        width: 60%;
+        margin: 0 auto;
+        padding: 60px 0 75px;
+    } 
+
+    &-item {
+        background-color: #EFEFEF;
+        @include flex($alignI: center);
+        text-align: left;
+        height: 100%;
+        min-height: 100px;
+
+        .image {
+            width: 140px;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        .text {
+            width: -webkit-calc(100% - 140px);
+            width: calc(100% - 140px);
+            padding: 15px 30px;
+        }
+    }
+
+    .col-6 {
+        margin-bottom: 20px;
+    }
+
+    .flex-row {
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
     }
 }
