@@ -25,6 +25,82 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
+    var toggleBlocks = function(){
+        var colorSamlpes = $('.swatch-color-container'),
+            colorPicked = $('.color-picked');
+            colorSamlpes.toggleClass('shown');
+            colorPicked.toggleClass('shown');
+    };
+
+
+    var setColors = function(el, move){
+        var parent =  $('.swatch-color-container'),
+            currentEl = parent.children().eq(el),
+            currentElName = $(currentEl).find('h2').text(),
+            currentElColor = $(currentEl).css('background-color'),
+            bigSample = $('.color-picked__main'),
+            num = 1;
+
+            if(!move) { 
+                for ( i = el-6; i < el; i++ ) {
+                    var color = '';
+                    function setSiblings(){
+                        color = parent.children().eq(i).css('background-color');
+                        $('.color-picked__siblings a:nth-child(' + num + ')').css('background-color', color);
+                        $('.color-picked__siblings a:nth-child(' + num + ')').attr('index', i);
+                    }
+                    setSiblings();
+                    num++;
+                }
+            } 
+
+            bigSample.css('background-color', currentElColor).children('.title').text(currentElName);
+    };
+
+
+    var lastPosition = '';
+    var lastPositionGap = '';
+    var goTop = function(el){
+        var topOfBlock = $('.tabs-controls').offset().top,
+            scrolled = $(window).scrollTop();
+
+        lastPositionGap = $(el).offset().top - scrolled;
+        lastPosition = $(el).offset().top;
+
+            if (topOfBlock < scrolled) {
+                $('html, body').animate({
+                    scrollTop: topOfBlock
+                }, 800);
+            }
+    };
+
+
+    var goDown = function() {
+        $('html, body').animate({
+            scrollTop: lastPosition - lastPositionGap
+        }, 400);
+    };
+
+
+    $('.swatch-color').click(function(e){
+        e.preventDefault();
+        var ind = $(this).index();
+        setColors(ind);
+        toggleBlocks();
+        goTop(this);
+    });
+
+    $('.color-picked__siblings a').click(function(e){
+        e.preventDefault();
+        var ind = $(this).attr('index');
+        setColors(ind, 'no-move');
+    });
+
+    $('.color-picked__main .title').click(function(){
+        toggleBlocks();
+        goDown();
+    });
+
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/

@@ -1,0 +1,210 @@
+.paint-colors .swatch-color {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 6px 6px 0;
+    position: relative;
+    color: #404040;
+    text-decoration: none
+}
+.paint-colors .swatch-color:hover .color-info {
+    display: none
+}
+.paint-colors .color-info {
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    z-index: 5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    border: 5px solid #fff
+}
+.paint-colors .color-info h2 {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    padding: 3px 0 0;
+    text-transform: none;
+    font: 11px Helvetica, Arial, Sans-Serif;
+    letter-spacing: .5px
+}
+.paint-colors .mini-color-swatch {
+    display: block;
+    height: 40px;
+    width: 95%;
+    margin: 0 auto
+}
+.paint-colors .color-family-buttons {
+    padding: 20px 0 40px
+}
+.paint-colors .color-family-buttons li {
+    float: left;
+    margin: 0 10px
+}
+.paint-colors .color-family-buttons li:first-child {
+    margin-left: 0
+}
+.paint-colors .color-family-buttons a {
+    padding: 5px 10px;
+    background: #e2e2e2;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out
+}
+.paint-colors .color-family-buttons a:hover {
+    background: #828282;
+    color: #fff
+}
+@media only screen and (min-width: 768px) {
+    .paint-colors section {
+        width: 100%;
+        max-width: 100%
+    }
+    .paint-colors .swatch-color:hover {
+        position: relative;
+        z-index: 1000
+    }
+    .paint-colors .swatch-color:hover .color-info {
+        display: block
+    }
+    .ie7 .paint-colors .swatch-color:hover .color-info {
+        display: none
+    }
+}
+
+.color-picked {
+    width: 100%;
+    @include flex($alignI: flex-start);
+    &__left {
+        width: 70%;
+        padding-right: 20px;
+    }
+    &__right {
+        width: 30%;
+    }
+    &__main {
+        height: 350px;
+        position: relative;
+        .title {
+            display: block;
+            width: 100%;
+            padding-left: 22px;
+            line-height: 50px;
+            font-size: 18px;
+            line-height: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #FFF;
+            text-align: left;
+            cursor: pointer;
+            background-color: rgba(0,0,0,.4);
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                width: 22px;
+                height: 22px;
+                background-image: url('../images/left-ar.svg');
+                -webkit-background-size: 100% 100%;
+                     -o-background-size: 100% 100%;
+                        background-size: 100% 100%;
+            }
+        }
+    }
+    &__siblings {
+        a {
+            display: inline-block;
+            vertical-align: top;
+            width: 16.666%;
+            float: left;
+            &:after {
+                display: block;
+                content: "";
+                padding-top: 100%;
+            }
+        }
+    }
+    &__recommended {
+        margin-bottom: 25px;
+        .title {
+            display: block;
+            width: 100%;
+            padding-left: 22px;
+            line-height: 50px;
+            font-size: 18px;
+            line-height: 50px;
+            color: #FFF;
+            text-align: left;
+            background-color: #6e8693;
+        }
+        a {
+            display: inline-block;
+            vertical-align: top;
+            width: 33.3333333%;
+            float: left;
+            &:after {
+                display: block;
+                content: "";
+                padding-top: 100%;
+            }
+        }
+        &:after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+    }
+}
+
+
+.paint-colors {
+    position: relative;
+    margin-top: 60px;
+}
+.swatch-color-container {
+    opacity: 0;
+    @include transition(all,.4s);
+    &.shown {
+        opacity: 1;
+    }
+}
+.color-picked {
+    @include transition(all,.4s);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(10%);
+       -moz-transform: translateY(10%);
+        -ms-transform: translateY(10%);
+         -o-transform: translateY(10%);
+            transform: translateY(10%);
+    &.shown {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0%);
+       -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+         -o-transform: translateY(0%);
+            transform: translateY(0%);
+    }
+}
+
+.illustrated-title {
+    text-transform: uppercase;
+    margin-top: 60px;
+    color: #ea6e5e;
+    font-size: 25px;
+    font-weight: 100;
+    img {
+        display: block;
+        margin: 0 auto 20px;
+    }
+}
