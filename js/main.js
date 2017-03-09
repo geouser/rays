@@ -169,6 +169,38 @@ jQuery(document).ready(function($) {
     })
 
 
+
+
+    $('.gallery-item').each(function(index, el) {
+        $(this).attr('data-slide-index', index);
+    });
+    $('.gallery-item').on('click', function(event) {
+        event.preventDefault();
+        $('.gallery-slider').slick('slickGoTo', $(this).attr('data-slide-index') );
+        $('.lightbox-slider').addClass('active');
+    });
+
+    $('.close-gallery').on('click', function(event) {
+        event.preventDefault();
+        $('.lightbox-slider').removeClass('active');
+    });
+
+    $('.gallery-slider').slick({
+        arrows: true,
+        dots: false,
+        fade: true,
+        asNavFor: '.gallery-slider-thumbnails'
+    })
+    $('.gallery-slider-thumbnails').slick({
+        arrows: false,
+        dots: false,
+        focusOnSelect: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.gallery-slider'
+    })
+
+
     /*----------------------------
                               SEND FORM
     -------------------------*/
