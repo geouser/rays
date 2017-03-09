@@ -64,3 +64,38 @@ form {
         margin-top: 50px;
     }
 }
+
+.slick-arrow,
+.slick-arrow:focus,
+.slick-arrow:active,
+.slick-arrow:hover {
+    width: 70px;
+    height: 90px;
+    z-index: 10;
+    background-color: rgba(255,255,255,.6);
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 23px 20px;
+         -o-background-size: 23px 20px;
+            background-size: 23px 20px;
+    &:before {
+        display: none;
+    }
+}
+.slick-arrow:hover {
+    opacity: .8;
+}
+.slick-next,
+.slick-next:hover,
+.slick-next:focus {
+    right: 0;
+    background-image: url("../images/right-ar.svg");
+}
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus {
+    left: 0;
+    background-image: url("../images/left-ar.svg");
+}

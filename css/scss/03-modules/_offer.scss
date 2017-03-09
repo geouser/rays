@@ -1,9 +1,26 @@
 .offer {
+    height: 440px;
+    @include flex($direction:column,$alignI:center, $justify:center);
+    background-position: 50% 50%;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
     h1,
     h2 {
         color: #fff;
         font-size: 50px;
         font-weight: 700;
+    }
+    p {
+        width: 440px;
+        max-width: 100%;
+        display: block;
+        margin: 15px auto 0;
+        font-size: 16px;
+        text-align: center;
+        color: #FFF;
+        line-height: 1.6;
     }
 }
 
