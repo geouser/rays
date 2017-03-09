@@ -5,7 +5,16 @@
     padding: 0 100px;
 
     @media (max-width: 1600px) {
-        padding:  0 50px;
+        padding: 0 50px;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 14px;
     }
 
     &-top {
@@ -13,20 +22,49 @@
         border-bottom: 1px solid #454545;
         line-height: 24px;
 
+        @media (max-width: 991px) {
+            padding: 30px 0;
+        }
+
         [class*='col-'] {
             -webkit-flex: 1 1 auto;
             -ms-flex: 1 1 auto;
             flex: 1 1 auto;
         }
 
+        & > .flex-row {
+            @media (max-width: 991px) {
+                display: block;
+            }
+        }
+
 
         .location {
             @include flex($alignI: flex-start);
+
+            @media (max-width: 991px) {
+                width: 350px;
+                margin: 0 auto;
+
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding-bottom: 25px;
+            }
+
+            @media (max-width: 360px) {
+                width: 100%;
+            }
 
             .footer-location {
                 width: 88px;
                 display: block;
                 margin-right: 30px;
+
+                @media (max-width: 991px) {
+                    margin-right: 10px;
+                    width: 80px;
+                }
 
                 img {
                     display: block;
@@ -37,10 +75,25 @@
             .footer-address {
                 width: -webkit-calc(100% - 118px);
                 width: calc(100% - 118px);
+
+                @media (max-width: 991px) {
+                    width: -webkit-calc(100% - 90px);
+                    width: calc(100% - 90px);
+
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
 
         .contacts {
+            @media (max-width: 1200px) {
+                text-align: center;
+            }
+            @media (max-width: 991px) {
+                padding-bottom: 25px;
+            }
             a[href^=mailto] {
                 color: $blue;
             }
@@ -52,6 +105,16 @@
             .menu-item {
                 width: 50%;
                 list-style: none;
+
+                @media (max-width: 1200px) {
+                    width: 100%;
+                    text-align: right;
+                }
+
+                @media (max-width: 991px) {
+                    text-align: center;
+                    font-size: 18px;
+                }
 
                 a {
                     color: #fff;
@@ -69,6 +132,12 @@
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+
+            @media (max-width: 1200px) {
+                width: 100%;
+                text-align: center;
+                padding-top: 25px;
+            }
             
             .socials {
                 margin: 0 -2px;
@@ -79,6 +148,10 @@
                 display: inline-block;
                 vertical-align: middle;
                 margin: 0 2px;
+
+                img {
+                    display: block;
+                }
             }
         }
     }
@@ -90,8 +163,25 @@
         padding: 50px 0 70px;
         color: #797979;
 
+        @media (max-width: 1200px) {
+            padding-bottom: 50px;
+        }
+
+        @media (max-width: 991px) {
+            padding: 30px 0;
+        }
+
+        @media (max-width: 776px) {
+            display: block;
+            text-align: center;
+        }
+
         p {
             width: 50%;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
         }
 
         .scroll-top {
@@ -106,6 +196,14 @@
             border: 0;
             padding: 0;
             cursor: pointer;
+
+            @media (max-width: 991px) {
+                top: 46%;
+            }
+
+            @media (max-width: 767px) {
+                display: none;
+            }
 
             &:after {
                 content: '';
@@ -130,6 +228,11 @@
 
         .studio {
             text-align: right;
+
+            @media (max-width: 767px) {
+                text-align: center;
+                padding-top: 20px;
+            }
 
             span {
                 display: inline-block;

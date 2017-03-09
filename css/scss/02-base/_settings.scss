@@ -26,6 +26,11 @@ strong {
 	width: 1180px;
 	margin: 0 auto;
 	text-align: center;
+
+  @media (max-width: 1210px) {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 
