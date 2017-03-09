@@ -7,18 +7,7 @@
     background-color: #00616B;
     -webkit-box-shadow: 0 0 4px rgba(0,0,0,.4);
             box-shadow: 0 0 4px rgba(0,0,0,.4);
-    &--orange {
-        background-color: #FE4E2D;
-    }
-    &--green {
-        background: #71ba51;
-    }
-    &--yellow {
-        background: #FEC606;
-    }
-    &--blue {
-        background: #2c82c9;
-    }
+
     &__left,
     &__right {
         height: 100%;        
@@ -100,6 +89,20 @@
             }
         }
     }
+}
+
+
+.orange .mainHeader {
+    background-color: #FE4E2D;
+}
+.green .mainHeader {
+    background: #71ba51;
+}
+.yellow .mainHeader {
+    background: #FEC606;
+}
+.blue .mainHeader {
+    background: #2c82c9;
 }
 
 

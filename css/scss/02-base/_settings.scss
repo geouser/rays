@@ -15,11 +15,33 @@ body {
   background-repeat: repeat;
 }
 
+h3 {
+    color: #3696D3;
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+.orange h3 {
+    color: #FE4E2D;
+}
+.green h3 {
+    color: #71ba51;
+}
+.yellow h3 {
+    color: #FEC606;
+}
+.blue h3 {
+    color: #2c82c9;
+}
+
 b,
 strong {
   font-weight: bold;
 }
 
+p {
+    line-height: 1.6;
+}
 // lAYOUT
 // ---------------------------
 .wrapper {

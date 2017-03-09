@@ -67,7 +67,6 @@
     margin-bottom: -20px;
 
     &-title {
-        color: $yellow;
         font-size: 25px;
         font-weight: 300;
         width: 60%;
@@ -283,4 +282,18 @@
             max-width: 100%;
         }
     }
+}
+
+
+.orange .fiber-features-title {
+    color: #FE4E2D;
+}
+.green .fiber-features-title {
+    color: #71ba51;
+}
+.yellow .fiber-features-title {
+    color: #FEC606;
+}
+.blue .fiber-features-title {
+    color: #2c82c9;
 }
