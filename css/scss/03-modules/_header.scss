@@ -17,7 +17,7 @@
         display: block;
         left: auto;
         z-index: 100;
-        padding: 40px 0;
+        padding: 0px 0 40px;
             -webkit-transform: translateX(260px);
        -moz-transform: translateX(260px);
         -ms-transform: translateX(260px);
@@ -254,14 +254,14 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 20px;
+        top: 0px;
         width: 140px;
         margin: auto;
         z-index: 10;
     }
     @media (max-width: 1200px) {
         margin: 0 auto 40px;
-        display: block;
+        display: none;
         text-align: center;
         img {
             margin: 0 auto;
