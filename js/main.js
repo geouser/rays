@@ -259,6 +259,8 @@ jQuery(document).ready(function($) {
         arrows: false,
         dots: false,
         fade: true,
+        draggable: false,
+        lazyLoad: 'ondemand',
         asNavFor: '.cargo-slider-thumbnails'
     })
 
@@ -268,6 +270,7 @@ jQuery(document).ready(function($) {
         focusOnSelect: true,
         slidesToShow: 5,
         slidesToScroll: 1,
+        lazyLoad: 'ondemand',
         asNavFor: '.cargo-slider',
         responsive: [
             {

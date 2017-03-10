@@ -165,6 +165,9 @@
 
 
 .cargo-slider {
+    .slide {
+        cursor: pointer;
+    }
     .slide img {
         display: block;
         width: 100%;
