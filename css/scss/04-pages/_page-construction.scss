@@ -206,17 +206,18 @@
 .paint-colors {
     position: relative;
     margin-top: 60px;
+    min-height: 500px;
     @media (max-width: 600px) {
         margin-top: 40px;
     }
 }
 .swatch-color-container {
     opacity: 0;
-    max-height: 0;
+    display: none;
     @include transition(all,.4s);
     &.shown {
         opacity: 1;
-        max-height: 200000px;
+        display: block;
     }
     &:after {
         content: "";

@@ -214,12 +214,12 @@ jQuery(document).ready(function($) {
         slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 5000,
-        autoplaySpeed: 0,
-        easing: 'linear',
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        draggable: false,
+        autoplaySpeed: 1000,
+        speed: 1000,
+        easing: 'ease',
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        draggable: true,
         responsive: [
             {
                 breakpoint: 1200,
