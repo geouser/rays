@@ -157,6 +157,18 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                Scroll Top
+    ---------------------------*/
+    $('.scroll-top').on('click', function(event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+    });
+
+
+    /*---------------------------
                                   Magnific popup
     ---------------------------*/
     $('.magnific').magnificPopup({
