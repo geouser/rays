@@ -13,7 +13,28 @@
             .col-6:first-child {
                 text-align: right;
             }
-        }   
+        }
+
+        &:nth-child(even) .flex-row {
+            .col-6:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    .content-wrap {
+        width: 500px;
+        max-width: 100%;
+        text-align: left;
+        display: inline-block;
+
+        @media (min-width: 991px) {
+            text-align: justify;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
     }
     
 
