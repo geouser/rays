@@ -212,9 +212,11 @@
 }
 .swatch-color-container {
     opacity: 0;
+    max-height: 0;
     @include transition(all,.4s);
     &.shown {
         opacity: 1;
+        max-height: 200000px;
     }
     &:after {
         content: "";
