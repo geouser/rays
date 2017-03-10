@@ -3,7 +3,6 @@
     border-bottom: 1px dashed #CCCCCC;
     text-align: left;
     font-size: 16px;
-    
     @media (min-width: 768px) {
         &:nth-child(odd) .flex-row {
             -webkit-flex-direction: row-reverse;
@@ -17,7 +16,14 @@
 
         &:nth-child(even) .flex-row {
             .col-6:last-child {
-                text-align: right;
+                padding-left: 45px;
+            }
+        }
+    }
+    @media (min-width: 1000px) {
+        &:nth-child(even) .flex-row {
+            .col-6:last-child {
+                padding-left: 85px;
             }
         }
     }
