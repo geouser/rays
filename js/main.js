@@ -54,7 +54,8 @@ jQuery(document).ready(function($) {
                 }
             } 
 
-            bigSample.css('background-color', currentElColor).children('.title').text(currentElName);
+            bigSample.css('background-color', currentElColor);
+            $('.illustrated-title').children('span').text(currentElName);
     };
 
 

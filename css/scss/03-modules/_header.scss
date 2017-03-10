@@ -17,7 +17,7 @@
         display: block;
         left: auto;
         z-index: 100;
-        padding: 40px 0;
+        padding: 0px 0 40px;
             -webkit-transform: translateX(260px);
        -moz-transform: translateX(260px);
         -ms-transform: translateX(260px);
@@ -261,7 +261,7 @@
     }
     @media (max-width: 1200px) {
         margin: 0 auto 40px;
-        display: block;
+        display: none;
         text-align: center;
         img {
             margin: 0 auto;
