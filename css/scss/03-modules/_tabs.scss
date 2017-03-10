@@ -54,16 +54,6 @@
                 }
             }
         }
-
-        &.yellow &-item.ui-state-active {
-            color: $yellow;
-            border-color: $yellow;
-        }
-
-        &.blue &-item.ui-state-active {
-            color: $blue;
-            border-color: $blue;
-        }
     }
 
     &-tab {
@@ -76,19 +66,23 @@
 }
 
 
-.orange .tabs-controls .tabs-controls-item.ui-state-active {
+.orange .tabs-controls .tabs-controls-item.ui-state-active,
+.orange .tabs-controls .tabs-controls-item.ui-state-hover {
     color: #FE4E2D;
     border-color: #FE4E2D;
 }
-.green .tabs-controls .tabs-controls-item.ui-state-active {
+.green .tabs-controls .tabs-controls-item.ui-state-active,
+.green .tabs-controls .tabs-controls-item.ui-state-hover {
     color: #71ba51;
     border-color: #71ba51;
 }
-.yellow .tabs-controls .tabs-controls-item.ui-state-active {
+.yellow .tabs-controls .tabs-controls-item.ui-state-active,
+.yellow .tabs-controls .tabs-controls-item.ui-state-hover {
     color: #FEC606;
     border-color: #FEC606;
 }
-.blue .tabs-controls .tabs-controls-item.ui-state-active {
+.blue .tabs-controls .tabs-controls-item.ui-state-active,
+.blue .tabs-controls .tabs-controls-item.ui-state-hover {
     color: #2c82c9;
     border-color: #2c82c9;
 }

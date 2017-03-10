@@ -157,6 +157,18 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                Scroll Top
+    ---------------------------*/
+    $('.scroll-top').on('click', function(event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+    });
+
+
+    /*---------------------------
                                   Magnific popup
     ---------------------------*/
     $('.magnific').magnificPopup({
@@ -414,7 +426,12 @@ jQuery(document).ready(function($) {
         };
 
         map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-        var markerImage = new google.maps.MarkerImage('images/location.png');
+        var markerImage = {
+            url: 'images/location.svg',
+            size: new google.maps.Size(73, 76),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(26, 76),
+        };
         var marker = new google.maps.Marker({
             icon: markerImage,
             position: mapMarkerCoord, 
