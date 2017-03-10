@@ -277,7 +277,15 @@ jQuery(document).ready(function($) {
         $('.gallery-slider').slick('slickGoTo', $(this).attr('data-slide-index') );
         $('.gallery-slider').slick('setPosition');
         $('.gallery-slider-thumbnails').slick('setPosition');
-        $('.lightbox-slider').addClass('active');
+        $('#grid-gallery').addClass('active');
+    });
+
+    $('.fiber-features-item').on('click', function(event) {
+        event.preventDefault();
+        $('.gallery-slider').slick('slickGoTo', 0);
+        $('.gallery-slider').slick('setPosition');
+        $('.gallery-slider-thumbnails').slick('setPosition');
+        $('#fiber-features-gallery-' + $(this).attr('data-gallery-index') ).addClass('active');
     });
 
     $('.close-gallery').on('click', function(event) {
@@ -289,6 +297,7 @@ jQuery(document).ready(function($) {
         arrows: true,
         dots: false,
         fade: true,
+        lazyLoad: 'ondemand',
         asNavFor: '.gallery-slider-thumbnails'
     })
     $('.gallery-slider-thumbnails').slick({
@@ -297,6 +306,7 @@ jQuery(document).ready(function($) {
         focusOnSelect: true,
         slidesToShow: 5,
         slidesToScroll: 1,
+        lazyLoad: 'ondemand',
         asNavFor: '.gallery-slider'
     })
 
