@@ -7,7 +7,7 @@
              -o-background-size: cover;
                 background-size: cover;
     @media (max-width: 800px) {
-        padding: 0 40px;
+        padding: 0 30px;
     }
     h1,
     h2 {
@@ -66,13 +66,14 @@
              -o-background-size: cover;
                 background-size: cover;
         @media (max-width: 800px) {
-            padding: 0 40px;
+            padding: 0 30px;
         }
         h1,
         h2 {
             color: #fff;
             font-size: 50px;
             font-weight: 700;
+             text-align: center;
             @media (max-width: 1200px) {
                 font-size: 40px;
             }
