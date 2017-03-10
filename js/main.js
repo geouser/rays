@@ -179,7 +179,11 @@ jQuery(document).ready(function($) {
     $('.offer--slider').slick({
         fade: true,
         arrows: true,
-        dots: false
+        dots: false,
+        speed: 900,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false
     });
 
     /*---------------------------
