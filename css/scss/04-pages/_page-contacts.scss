@@ -135,3 +135,56 @@
         z-index: 1;
     }
 }
+
+
+
+.download_pdf {
+  padding: 70px 0;
+  border-top: 1px dashed #CCCCCC;
+  border-bottom: 1px dashed #CCCCCC;
+}
+
+.download_pdf a  {
+  display: block;
+  text-align: left;
+  color: #2d2d2d;
+}
+
+.download_pdf a img {
+  display: inline-block;
+  width: 40px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.download_pdf a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+  .download_pdf a {
+    text-align: center;
+  }
+
+  .download_pdf a img {
+    margin-right: 0;
+  }
+
+  .download_pdf a span {
+    display: block;
+    margin-top: 10px;
+
+  }
+}
+
+@media (max-width: 500px) {
+  .download_pdf {
+    padding: 55px 0;
+  }
+  .download_pdf .col-2 {
+    width: 33.33%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
